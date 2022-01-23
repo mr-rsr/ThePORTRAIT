@@ -107,7 +107,7 @@ a{
 /* styling navbar */
 .nav{
     display: flex;
-    background-color: #e5e8e8;
+    background-color:#e5e8e8;
     border-top:.2rem solid #00040193 ;
     border-bottom:.2rem solid #000401c5 ;
     color:#000401;
@@ -145,12 +145,14 @@ a{
     margin-right:2rem;
     align-items: flex-start;
     margin-top: 0;
+   
 }
 .nav ul li{
+    font-family: 'Poppins', sans-serif;
     margin-top:0.5rem;
     margin-left:2rem;
-    font-size:1.3rem;
-    font-weight: 750;
+    font-size:1.2rem;
+    font-weight:600;
     letter-spacing: 0.1rem;
     min-width:4rem;
     text-align: center;
@@ -158,11 +160,18 @@ a{
     padding-right: 0.2rem;
     text-transform: capitalize;
     border-radius: 0.5rem;
+    position:relative;
 }
-.nav ul li:hover{
-border-bottom: 2px solid #8d9797;
-color:#8d9797;
-font-size:1.35rem;
+.nav ul li:hover::after{
+    height:.2rem;
+    min-width:4rem;
+    background-color:#8d9797;
+    content: "";
+    position:absolute;
+    bottom: -0.1rem;
+    left:.3rem;
+    transition:ease-in-out 2s;
+        
 }
 /* styling the middle part */
 .middle{
@@ -626,17 +635,192 @@ font-size:1.35rem;
    
 }
 .soc ul li{
-    height:7rem;
-    width:7rem;
+    height:5rem;
+    width:5rem;
     border-radius: 50%;
     box-shadow: 0 .2rem .3rem 0;
     border:.1rem solid rgb(50, 243, 32);
     }
 .soc ul .fa{
-    height:6rem;
-    width:6rem;
-    font-size:5rem;
+    height:4rem;
+    width:4rem;
+    font-size:3rem;
     margin-left:.45rem;
     margin-top: 1rem;
     text-align: center;
+}
+.soc ul .fa-facebook{
+    color:#1877F2;
+}
+.soc ul .fa-twitter{
+    color:#1DA1F2;
+}
+.soc ul .fa-instagram{
+    color:#E4405F;
+}
+.bottom
+{   margin:2rem auto 0 auto;
+    width:100%;
+    z-index: 1;
+    height:26rem;
+    padding:0 3% 0 3%;
+    position:relative;
+    /* background-color:black; */
+
+}
+
+.foot1
+{
+    display:flex;
+    margin:auto;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    box-shadow:0 .2rem .3rem 0;
+    height:23rem;
+    width:95%;
+    position:absolute;
+    top:3%;
+    left:3%;
+    border-radius:.6rem;
+    background-color: #010703f1;
+    padding-left: 15rem;
+    
+
+}
+.list
+{   padding:0 ;
+    display:flex;
+    z-index: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    color:#e5e8e8;
+    margin:auto 1rem auto 1rem ;
+}
+
+.list ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-left:5rem;
+    margin-right: 0;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+.list ul li:nth-child(1){
+    font-size:1.3rem;
+    margin-bottom: 1rem;
+    font-weight:400;
+    letter-spacing: 0.1rem;
+}
+.list ul li:nth-child(n+2){
+    margin:.4rem;
+    font-weight: 400;
+    color:#e5e8e8de;
+}
+.list ul li p{
+    margin:0;
+    padding:0;
+    position: relative;
+}
+.list ul li p::after{
+    height:.1rem;
+    width:4.5rem;
+    background-color: #8d9797;
+    content: "";
+    position:absolute;
+    bottom: -0.1rem;
+    left:0rem;
+        
+}
+.list ul::after{
+    height:.1rem;
+    width:60%;
+    background-color: #8d9797;
+    content: "";
+    position:absolute;
+    bottom: 4.5rem;
+    left:26rem;
+} 
+.subs{
+    height:3.5rem;
+    width:61%;
+    position: absolute;
+    margin-left:10%;
+    top:2rem;
+    border-radius:2rem;
+    border:.2rem solid #8d9797;
+    color: #e5e8e8;
+    box-sizing: border-box;
+}
+.subs p{
+    font-size: 1.3rem;
+    margin-left:5rem;
+    letter-spacing: .2rem;
+    margin-top:1rem;
+    font-weight: 300;
+
+}
+.subs1{
+    position:absolute;
+    right:-.1rem;
+    bottom:-.1rem;
+    height:3.5rem;
+    width:45%;
+    border-radius:2rem;
+    background-color: #e5e8e8;
+    color:#000401;
+}
+.subs1 p{
+    padding-top: 0.75%;
+}
+.rights{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position:absolute;
+    bottom:1rem;
+    left:20.5rem;
+    color:#bbb;
+    width:75%;
+    height:5rem;
+
+}
+.rights .r1{
+    margin-top:1rem;
+    margin-right:15rem;
+}
+.r2 ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    margin-top:2rem;
+}
+.r2 ul li{
+    margin-left:1rem
+}
+.f_about
+{
+    position:absolute;
+    left:4rem;
+    top:4rem;
+    text-align: center;
+    width:18rem;
+    color:#e5e8e8;
+    font-family: 'Poppins', sans-serif;
+    padding-right:1.5rem;
+    border-right:.2rem solid #717171;
+}
+.f_about h6{
+    margin:0;
+    padding:0 0 1rem 0;
+    font-size: 2.2rem;
+    font-family: 270;
+    letter-spacing: .1rem;
+}
+.f_about p{
+    font-size: 1.2rem;
+    color:#8d9797;
 }
